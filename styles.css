@@ -212,7 +212,7 @@ html[dir="rtl"] .kicker {
   background: var(--surface);
   color: var(--ink);
   cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .icon-btn:hover,
@@ -230,8 +230,8 @@ html[dir="rtl"] .kicker {
 
 /* Light mode: use lighter color for pressed button */
 html[data-theme="light"] .icon-btn[aria-pressed="true"] {
-  background: var(--leaf);
-  color: var(--ink);
+  background: var(--leaf) !important;
+  color: var(--ink) !important;
 }
 
 /* ============================================
@@ -526,6 +526,12 @@ html[dir="rtl"] .toggle-track[aria-checked="true"] .toggle-knob {
   .icon-btn {
     width: 2.25rem;
     height: 2.25rem;
+  }
+
+  /* Light mode: use lighter color for pressed button on mobile */
+  html[data-theme="light"] .icon-btn[aria-pressed="true"] {
+    background: var(--leaf);
+    color: var(--ink);
   }
 
   /* Adjust kicker text */
