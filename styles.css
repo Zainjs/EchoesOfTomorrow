@@ -228,6 +228,12 @@ html[dir="rtl"] .kicker {
   color: var(--bg);
 }
 
+/* Light mode: use lighter color for pressed button */
+html[data-theme="light"] .icon-btn[aria-pressed="true"] {
+  background: var(--leaf);
+  color: var(--ink);
+}
+
 /* ============================================
    PROGRESS BAR
    ============================================ */
